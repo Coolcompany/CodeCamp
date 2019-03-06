@@ -1,7 +1,8 @@
-section{
+body{
     display: block;
-    
+    background: fffff;
 }
+
 h1{
     text-align: center;
 }
@@ -14,3 +15,26 @@ img{
 }
 .textindent{
     text-indent:30px
+}
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:grey;
+}
+nav ul li{
+    float: left;
+    
+}
+li a{
+    display: block;
+    padding: 8px;;
+    background-color: grey;
+}
+li a:hover{
+    background-color: aqua;
+}
+.active{
+    background-color: aqua;
+}
