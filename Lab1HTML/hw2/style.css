@@ -1,0 +1,42 @@
+div{
+    background-color: aquamarine;
+    width: 350px ;
+    height: 200px;
+    margin: auto;
+    padding: 50px;
+    border: 1px solid black;
+    
+}
+label{
+    padding: 2px 2px;
+    margin: 2px 0;
+    display: inline-block;
+    float:left;
+    clear:left;
+    text-align: right;
+
+}
+input[type=text]{
+   
+    padding: 2px 2px;
+    margin: 2px 0;
+    float:right;
+   
+}
+input[type=number]{
+    padding: 2px 2px  ;
+    margin: 2px 2px  ; 
+    float:left;
+  
+}
+input[type=submit]{
+    padding: 2px 2px  ;
+    margin: 70px 2px  ; 
+    float:baseline;
+  
+}
+
+span{
+   
+    float:right;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+    <style>
+        form{
+            border: 1px solid black;
+            width: 350px ;
+            height: 250px;
+            padding: 30px ;
+            margin: auto;
+            margin-top:50px; 
+        }
+        label{
+            display: inline;
+            padding: 2px 2px;
+            margin: 2px 0;
+           
+        }
+        input[type=text]{
+             display: inline;
+             padding: 2px 2px;
+             margin: 2px 0;
+          
+        }
+        input[type=number]{
+            display: inline;
+             padding: 2px 2px  ;
+             margin: 2px 0  ; 
+             
+        }
+        span{
+   
+           
+        }
+
+    </style>
+</head>
+<body>
+        
+    <div >
+              <form name="registorform" action="register_form">
+                    <label>First Name:</label>
+                    <input class="input"type="text"></input>
+                    <br>
+                  
+                    <label>Lastname:</label>
+                    <input class="input" type="text"></input>
+                    <br>
+                   
+                    <label>Password:</label>
+                    <input class="input"type="password"></input>
+                    <br>
+
+                    <label>Confirm Password:</label>
+                    <input class="input" type="password"></input>
+                    <br>
+
+                    <label>Email:</label>
+                    <input class="input" type="email"></input>
+                    <br>
+
+                    <label>Confirm Email:</label>
+                    <input class="input" type="text"></input>
+                    <br>
+
+                    <label>Birthday :</label>
+                    <span>
+                            <input type="number" style="width: 26px" min="1" max="31" step="1" placeholder="1"/>
+                            <input type="number" style="width: 26px" min="1" max="12" step="1" placeholder="1"/>
+                            <input type="number" style="width: 90px"min="1980" max="2019" step="1" placeholder="1980"/>
+                    </span>
+                   
+                    <br>
+
+                    <label>Gender:</label>
+                    <span >
+                            <input name="gender "type="radio" value="Male">Male</input>
+                            <input name="gender "type="radio" value="Female">Female</input>
+                            <br>
+                    </span>
+                    <br>
+
+                   <input type="submit" >
+                   <input type="reset" >
+                    
+            </form>
+
+
+    </div>
+   
+</body>
+</html>
