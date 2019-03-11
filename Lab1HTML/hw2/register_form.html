@@ -4,72 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
     <title>Form</title>
-    <style>
-        form{
-            border: 1px solid black;
-            width: 350px ;
-            height: 250px;
-            padding: 30px ;
-            margin: auto;
-            margin-top:50px; 
-        }
-        label{
-            display: inline;
-            padding: 2px 2px;
-            margin: 2px 0;
-           
-        }
-        input[type=text]{
-             display: inline;
-             padding: 2px 2px;
-             margin: 2px 0;
-          
-        }
-        input[type=number]{
-            display: inline;
-             padding: 2px 2px  ;
-             margin: 2px 0  ; 
-             
-        }
-        span{
-   
-           
-        }
-
-    </style>
+  
 </head>
 <body>
         
     <div >
-              <form name="registorform" action="register_form">
+        <fieldset>
+            <legend>Register Form</legend>
+            <form name="registorform" type="post" action="">
                     <label>First Name:</label>
-                    <input class="input"type="text"></input>
+                    <input class="input"type="text" style="margin-left:60px;"></input>
                     <br>
                   
                     <label>Lastname:</label>
-                    <input class="input" type="text"></input>
+                    <input class="input" type="text" style="margin-left:69px;"></input>
                     <br>
                    
                     <label>Password:</label>
-                    <input class="input"type="password"></input>
+                    <input class="input"type="password" style="margin-left:70px;"></input>
                     <br>
 
                     <label>Confirm Password:</label>
-                    <input class="input" type="password"></input>
+                    <input class="input" type="password" style="margin-left:11px;"></input>
                     <br>
 
                     <label>Email:</label>
-                    <input class="input" type="email"></input>
+                    <input class="input" type="email" style="margin-left:93px;"></input>
                     <br>
 
                     <label>Confirm Email:</label>
-                    <input class="input" type="text"></input>
+                    <input class="input" type="email" style="margin-left:35px;"></input>
                     <br>
 
                     <label>Birthday :</label>
-                    <span>
-                            <input type="number" style="width: 26px" min="1" max="31" step="1" placeholder="1"/>
+                    <span style="margin-left:71px;">
+                            <input type="number" style="width: 26px" min="1" max="31" step="1" placeholder="1" />
                             <input type="number" style="width: 26px" min="1" max="12" step="1" placeholder="1"/>
                             <input type="number" style="width: 90px"min="1980" max="2019" step="1" placeholder="1980"/>
                     </span>
@@ -77,18 +48,24 @@
                     <br>
 
                     <label>Gender:</label>
-                    <span >
-                            <input name="gender "type="radio" value="Male">Male</input>
-                            <input name="gender "type="radio" value="Female">Female</input>
+                    <span  style="margin-left:70px;">
+                            <input name="gender "type="radio" value="Male" checked >Male</input>
+                            <input name="gender "type="radio" value="female" >Female</input>
                             <br>
                     </span>
                     <br>
+                    <div style="text-align:center;">
+                            <input type="submit" >
+                            <input type="reset" >
 
-                   <input type="submit" >
-                   <input type="reset" >
+                    </div>
+                  
+                   
                     
             </form>
 
+        </fieldset>
+             
 
     </div>
    
