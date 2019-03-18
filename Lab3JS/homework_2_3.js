@@ -1,5 +1,5 @@
 function showTable(){  
-            var peopleSalary = [
+            let peopleSalary = [
                 {"id":"1001","firstname":"Luke","lastname":"Skywalker","company":"Walt Disney","salary":["40000","42000","48400"]},
                 {"id":"1002","firstname":"Tony","lastname":"Stark","company":"Marvel","salary":["1000000","1100000","1210000"]},
                 {"id":"1003","firstname":"Somchai","lastname":"Jaidee","company":"Love2work","salary":["20000","22000","24200"]},
