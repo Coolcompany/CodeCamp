@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Java Script</title>
+</head>
+<body>
+        <table id="myTable">
+        
+        </table>
+        
+       
+</body>
+</html>
+<script>
+  let text = ' ['+
+     '{"id":"1001","firstname":"Luke","lastname":"Skywalker","company":"Walt Disney","salary":"40000"},'+
+     '{ "id":"1002","firstname":"Tony","lastname":"Stark","company":"Marvel","salary":"1000000"},'+
+     '{ "id":"1003","firstname":"Somchai","lastname":"Jaidee","company":"Love2work","salary":"20000"},'+
+     '{ "id":"1004","firstname":"Monkey D","lastname":"Luffee","company":"One Piece","salary":"9000000"} ]';
+  
+  let peopleSalary=JSON.parse(text);
+
+for (let key in peopleSalary) { 
+  let innerArray = peopleSalary[key];
+  
+  let id =  `${peopleSalary[key].id}`;
+  let firstname =  `${peopleSalary[key].firstname}`;
+  let lastname = `${peopleSalary[key].lastname}`;
+  let salary = `${peopleSalary[key].salary}`;
+  let markup = "<tr><td>" + id + "</td><td>" + firstname +"</td><td>" + lastname +"</td><td>"+ salary +"</td><tr>"
+  $('#myTable').append(markup);  
+  
+  for (let arrKey in  innerArray )
+  {
+    let markupHead = "";
+    alert(markupHead);
+    for (let i = 0; i < innerArray.length; i++) {
+
+      
+    }
+    
+    
+    
+    
+   
+
+    
+  }
+}
+
+
+/*
+for (const prop in peopleSalary) { 
+     let key =  `peopleSalary.${prop}`;
+      let id =  `${peopleSalary[prop].id}`;
+      let firstname =  `${peopleSalary[prop].firstname}`;
+      let lastname = `${peopleSalary[prop].lastname}`;
+      let salary = `${peopleSalary[prop].salary}`;
+      let markup = "<tr><td>" + id + "</td><td>" + firstname +"</td><td>" + lastname +"</td><td>"+ salary +"</td><tr>"
+       $('#myTable').append(markup);
+} */
+
+</script>
