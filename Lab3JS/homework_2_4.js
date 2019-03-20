@@ -1839,33 +1839,43 @@ function showTable(){
     }
   ];
 
+            let friendsCount =0;
+            let htmlH = '<tr id="rowHead"><th> Photo </th><th> Name </th><th> Friend Count </th><th> E-Mail </th><th> Company </th><th> Balance </th></tr>';
             
-            html = '<tr><td> Photo </td><td> Name </td><td> Friend Count </td><td> E-Mail </td><td> Company </td><td> Balance </td></tr>';
+            for (let x in  data1 ) {   
 
-            for (let indexArr in  data1 ) {   
+              htmlH += "<tr>";
+              let name =  `${data1[x].name}`;
+              let email =  `${data1[x].email}`;
+              let company =  `${data1[x].company}`;
+              let balance =  `${data1[x].balance}`;
+              
 
-                 let firstArr = data1[indexArr];
-                 let html ="<tr>";
+              let xArr = data1[x];
+              for (let y in  xArr ) {   
+                  if (y==="friends"){
+                  friendsCount =0;
+                  let yArr = xArr[y];
+                  for (let z in  yArr ) {  
 
-              for (let index in firstArr){
+                    friendsCount++;
+  
+                  }
+                  //alert(friendsCount);
+                }
                
-                
- 
-                 let   name = firstArr[index].name;
-                 alert(name); 
-
-                 let name1 =  `${firstArr[index].name}`;
-                 let email1 =  `${firstArr[index].email}`;
-                 let company1 =  `${firstArr[index].company}`;
-                 let balance1 =  `${firstArr[index].balance}`;
-                  
-                  html += "<td><img></td><td>" + name1 +"</td><td>Frined Count</td><td>" + email1 +"</td><td>" + company1 +"</td>";
               }
+              //alert(friendsCount);
+
+              
+
+              htmlH += "<td></td><td>" + name +"</td><td>"+friendsCount +"</td><td>" + email +"</td><td>" + company +"</td><td>"+ balance +"</td>";  
+             
             }
             
-            html += "</tr>";
-            $('#myTable3').append( html);
-            alert('show table');
+            htmlH += "</tr>";
+            $('#myTable3').append( htmlH);
+            
 
 
 }
