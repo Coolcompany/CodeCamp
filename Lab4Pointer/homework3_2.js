@@ -5,9 +5,13 @@ fetch('http://127.0.0.1:5500/ccodecamp/Lab4Pointer/homework2_1_.json')
             return response.json(); 
     })
     .then(function(employees) {
+         let newEmployees ={};
+         newEmployees = addAdditionalFields(employees);
+        
+         showTable(newEmployees);  
+         showOldTable(employees);
          
-         addAdditionalFields(employees);
-         showTable(employees);  
+         
     })
     
     .catch(error =>{
@@ -33,11 +37,12 @@ fetch('http://127.0.0.1:5500/ccodecamp/Lab4Pointer/homework2_1_.json')
         return row;
     }
     function addAdditionalFields(obj) {
-        
+        let newObj ={};
+
         for (let i in obj ){  
 
-            addYearSalary(obj[i]);
-            addNextSalary(obj[i]);
+           newObj[i] = addYearSalary(obj[i]);
+           newObj[i] = addNextSalary(obj[i]);
 
         }
         return obj;
@@ -85,7 +90,27 @@ fetch('http://127.0.0.1:5500/ccodecamp/Lab4Pointer/homework2_1_.json')
                 }
                    
                 markup += "</ol></td></tr>";
-                $('#myTable').append(markup);  
+                $('#myTable2').append(markup);  
+
+             }
+
+        }
+        function showOldTable(peopleSalary){
+
+            for (let index in peopleSalary){
+                
+                let id =  `${peopleSalary[index].id}`;
+                let firstname =  `${peopleSalary[index].firstname}`;
+                let lastname = `${peopleSalary[index].lastname}`;
+                let company = `${peopleSalary[index].company}`;
+                let salary = `${peopleSalary[index].salary}`;
+                
+
+                let markup = "<tr><td>" + id + "</td><td>" + firstname +"</td><td>" + lastname +"</td><td>"+ company +"</td><td>"+ salary +"</td>";
+
+                                   
+                markup += "</tr>";
+                $('#myTable1').append(markup);  
 
              }
 
