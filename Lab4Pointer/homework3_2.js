@@ -65,7 +65,7 @@ fetch('http://127.0.0.1:5500/ccodecamp/Lab4Pointer/homework2_1_.json')
                     
                 }
                 html += "</tr>";
-                $('#myTable').append( html);
+                $('#myTable2').append( html);
             }
             
         }
@@ -96,6 +96,8 @@ fetch('http://127.0.0.1:5500/ccodecamp/Lab4Pointer/homework2_1_.json')
 
         }
         function showOldTable(peopleSalary){
+            let markupH = "<tr><th>id</th><th>firstname</th><th>lastname</th><th>company</th><th> salary </th>";
+            $('#myTable1').append(markupH);  
 
             for (let index in peopleSalary){
                 
